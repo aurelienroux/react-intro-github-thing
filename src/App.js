@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import ImageCaption from './imageCaption.js';
-import Layout from './Layout.js'
-import Guess from "./GuessTheNumber.js"
+import logo from '../public/logo.svg';
+import './css/App.css';
+import ImageCaption from './components/imageCaption.js';
+import Layout from './components/Layout.js'
+import Guess from "./components/GuessTheNumber.js"
+import UClicked from './components/uclicked.js'
+import CharLim from './components/limitChars.js'
+import GitProfile from './components/githubPro.js'
 var imageList = [
   {id: 42, source: "http://placekitten.com/g/210/210", text: "Hello kittenz!"},
   {id: 43, source: "https://facebook.github.io/react/img/logo.svg", text: "React Logo"},
@@ -30,8 +33,17 @@ class App extends Component {
           { imageList.map((ele) => <ImageCaption text={ele.text} source={ele.source} />) }
         </div>
         <hr/>
-        <h2>guess game</h2>
-        <Guess randomNumber="2"/>
+        <h2>Complete Guessin Game</h2>
+        <Guess/>
+        <hr/>
+        <h2>AYYO this is a buuton counter</h2>
+        <UClicked/>
+        <hr/>
+        <h2>ma name a jeff</h2>
+        <CharLim/>
+        <hr/>
+        <h2>githubthing works majigy get jigy wit it</h2>
+        <GitProfile/>
       </Layout>
       </div>
     );
