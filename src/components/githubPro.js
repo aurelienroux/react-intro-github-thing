@@ -41,22 +41,24 @@ class gitHubPro extends React.Component {
       return(
         <div>
           {/* onChange={this.getInfo} */}
-          <input type="text" ref="charText" value={ this.state.value }  />
+          <input type="text" ref="charText" />
           <input type='button' value="Check For User" onClick={ this.getInfo }/>
-          <div>
+          <div className="profileBox">
             <span>
               <img className="userpic" src={ this.state.photo } alt=""/>
             </span>
-            <span>{ this.state.username }</span>
-            <div>{ this.state.bio }</div>
-            <div>{ this.state.blog }</div>
+            <span id="username">{ this.state.username }</span>
+            <hr/>
+            <div className="contentGit">{ this.state.bio }</div>
+            <hr/>
+            <div className="contentGit">{ this.state.blog }</div>
           </div>
         </div>
       )
     }else if(this.state.er){
       return(
         <div>
-          <input type="text" ref="charText" value={ this.state.value }/>
+          <input type="text" ref="charText" />
           <input type='button' value="Check For User" onClick={ this.getInfo }/>
           <div>{ this.state.er }</div>
         </div>
@@ -64,7 +66,7 @@ class gitHubPro extends React.Component {
     }else if(this.state.err){
       return(
         <div>
-          <input type="text" ref="charText" value={ this.state.value }/>
+          <input type="text" ref="charText" />
           <input type='button' value="Check For User" onClick={ this.getInfo }/>
           <div>{ this.state.err }</div>
         </div>
@@ -72,7 +74,7 @@ class gitHubPro extends React.Component {
     }else{
       return(
         <div>
-          <input type="text" ref="charText" value={ this.state.value }/>
+          <input type="text" ref="charText"/>
           <input type='button' value="Check For User" onClick={ this.getInfo }/>
         </div>
       )

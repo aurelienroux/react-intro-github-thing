@@ -19,7 +19,27 @@
 }
 .userpic{
   border-radius: 50%;
+  height: 9em;
+  width:9em;
 }
+.profileBox{
+  display: flex;
+  border: 4px dashed tomato;
+  flex-direction: row;
+  margin : 0 24em 0 24em;
+  padding: 1em
+}
+.contentGit{
+  align-self: center;
+  font-weight: 600;
+  color: rgb(20, 152, 236);
+}
+#username{
+  align-self: center;
+  font-weight: 900;
+  color: purple;
+}
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
